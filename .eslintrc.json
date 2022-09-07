@@ -21,8 +21,35 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
   "rules": {
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "never",
+        "groups": [
+          "/^react$/",
+          "/^next$/",
+          "module",
+          "/^libs/",
+          "/^pages/",
+          "/^layouts/",
+          "/^templates/",
+          "/^shared/",
+          "/^ui/",
+          "/^styles/",
+          "/^contexts/",
+          "/^hooks/",
+          "/^constants/",
+          "/^utils/",
+          "/^types/",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
     "no-unused-vars": "off",
     "no-use-before-define": "error",
     "react/display-name": "off",
