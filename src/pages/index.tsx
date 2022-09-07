@@ -1,18 +1,6 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import TemplateExample from 'templates'
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Boilerplate NextJS</title>
-      </Head>
-
-      <main>
-        <h1>Boilerplate NextJS + Eslint & Prettier</h1>
-      </main>
-    </div>
-  )
-}
+const Home: NextPage = () => <TemplateExample />
 
 export default Home

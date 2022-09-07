@@ -14,7 +14,7 @@
     "type-check:watch": "yarn type-check --watch"
   },
   "lint-staged": {
-    "src/**/*": [
+    "src/**/*.{ts,tsx}": [
       "yarn lint --fix"
     ]
   },
